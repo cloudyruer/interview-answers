@@ -219,3 +219,13 @@ body {
   flex-grow: 1;
 }
 ```
+
+# 6. 架構
+
+> src
+>
+> > - components
+> > - config
+> > - hooks
+> > - pages
+> > - store
