@@ -180,3 +180,42 @@ div.way2 {
   transform: translate(-50%, -50%);
 }
 ```
+
+# 5. flex-basis & flex-grow
+
+```html
+<body>
+  <div class="demo demo--basis"></div>
+  <div class="demo demo--grow"></div>
+</body>
+```
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.demo {
+  width: 100px;
+}
+
+.demo--basis {
+  background-color: blue;
+  /* 看想要多高囉 */
+  flex-basis: 100px;
+}
+
+.demo--grow {
+  background-color: red;
+  flex-grow: 1;
+}
+```
