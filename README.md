@@ -108,3 +108,36 @@ useEffect(() => {
   // 依據目標決定
 }, [keyword]);
 ```
+
+# 3. This
+
+```javascript
+console.log(this); // window
+
+const getArrowThis = () => {
+  console.log(this); // window, since arrow function (lexical)
+};
+
+const getFunThis = function () {
+  console.log(this); // window, would be undefined in strict mode
+
+  return {
+    normalFun() {
+      console.log(this); //obj
+
+      (() => {
+        console.log(this); // obj, lexical
+      })();
+    },
+    arrowFun: () => {
+      console.log(this); // window, would be undefined in strict mode (lexical)
+    },
+  };
+};
+
+getArrowThis();
+
+const obj = getFunThis();
+obj.normalFun();
+obj.arrowFun();
+```
