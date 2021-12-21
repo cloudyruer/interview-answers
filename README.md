@@ -141,3 +141,42 @@ const obj = getFunThis();
 obj.normalFun();
 obj.arrowFun();
 ```
+
+# 4. CSS - Center
+
+```html
+<body class="way1">
+  <div class="way2">This is my div</div>
+</body>
+```
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+}
+
+body.way1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.way2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
